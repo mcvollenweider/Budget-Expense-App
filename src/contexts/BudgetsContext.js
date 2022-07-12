@@ -5,6 +5,10 @@ import useLocalStorage from "../hooks/useLocalStorage";
 
 const BudgetsContext = React.createContext();
 
+
+export const UNCATEGORIZED_BUDGET_ID = "Uncategorized"
+
+
 export function useBudgets() {
   return useContext(BudgetsContext);
 }
