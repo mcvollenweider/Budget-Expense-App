@@ -1,5 +1,6 @@
 import { Button, Stack } from "react-bootstrap"
 import Container from "react-bootstrap/Container"
+import logo from './/chase-logo.jpg';
 import AddBudgetModal from "./components/AddBudgetModal"
 import AddExpenseModal from "./components/AddExpenseModal"
 import ViewExpensesModal from "./components/ViewExpensesModal"
@@ -25,7 +26,8 @@ function App() {
     <>
       <Container className="my-4">
         <Stack direction="horizontal" gap="2" className="mb-4">
-          <h1 className="me-auto">Budgets</h1>
+        <img src={logo} alt="Logo" />;
+          <h1 className="me-auto">Budget Tracker</h1>
           <Button variant="primary" onClick={() => setShowAddBudgetModal(true)}>
             Add Budget
           </Button>
@@ -65,6 +67,7 @@ function App() {
               setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)
             }
           />
+          
           <TotalBudgetCard />
         </div>
       </Container>
